@@ -4,6 +4,9 @@ import Cart from "./components/Cart.jsx";
 import '../src/styles/normalize.css'
 import '../src/styles/styles.css'
 import FindProductsInput from "./components/FindProductsInput.jsx";
+import {Link} from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import CartPage from "./pages/CartPage.jsx";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -78,6 +81,17 @@ const App = () => {
 
   return (<div className="main__container">
     <h1 className="main__container-title">🛒 Online store</h1>
+
+    <nav className="main__container-navmenu">
+      <Link to="/">Main page</Link>
+      <Link to="/cart">Cart</Link>
+    </nav>
+
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/" element={<CartPage />}/>
+    </Routes>
+
     <FindProductsInput
       searchTerm={searchTerm}
       setSearchTerm={setSearchTerm}
