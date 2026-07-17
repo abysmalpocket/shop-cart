@@ -77,7 +77,7 @@ const App = () => {
   }
 
   return (<div className="main__container">
-    <h1 className="main__container-title">🛒 Интернет-магазин</h1>
+    <h1 className="main__container-title">🛒 Online store</h1>
     <FindProductsInput
       searchTerm={searchTerm}
       setSearchTerm={setSearchTerm}

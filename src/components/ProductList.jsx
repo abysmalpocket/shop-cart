@@ -12,7 +12,7 @@ const ProductList = (props) => {
   })
 
   if (filteredProducts.length === 0) {
-    return <p className="no-products">Ничего не найдено 😕</p>;
+    return <p className="no-products">Nothing was found 😕</p>;
   }
 
   return (

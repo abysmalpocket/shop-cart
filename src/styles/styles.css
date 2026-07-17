@@ -12,63 +12,63 @@
 .main__container-title {
   font-size: 48px;
   text-align: center;
-  color: #333; /* Темно-серый, но не черный */
+  color: #333;
   margin-bottom: 30px;
-  letter-spacing: 2px; /* Немного воздуха между буквами */
+  letter-spacing: 2px;
 }
 
 .container__product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Карточки выравниваются по левому краю */
-  gap: 24px; /* Больше воздуха между карточками */
-  padding: 0 40px; /* Отступы по краям экрана */
-  list-style: none; /* Убираем маркеры списка */
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 0 40px;
+  list-style: none;
 }
 
 .container__product-item {
   border-radius: 10px;
-  width: 280px; /* Фиксированная ширина, чтобы карточки не растягивались */
+  width: 280px;
 }
 
 .product-item-card {
-  width: 280px; /* Чуть уже, чтобы в ряд влезало больше карточек */
+  width: 280px;
   height: 480px;
-  background: white; /* Белый фон для контраста */
-  border-radius: 16px; /* Сильное скругление углов */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Легкая тень, а не черная тяжелая */
-  padding: 16px; /* Внутренние отступы, чтобы текст не прилипал к краям */
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 16px;
   display: flex;
-  flex-direction: column; /* Располагаем элементы в колонку */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавность при наведении */
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product-item-card:hover {
-  transform: translateY(-4px); /* Приподнимается при наведении */
+  transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .product-item-title {
-  height: 50px; /* Фиксированная высота для заголовка */
-  overflow: hidden; /* Если текст не влезает — скрываем */
-  font-size: 16px; /* Уменьши размер, чтобы влезало */
+  height: 50px;
+  overflow: hidden;
+  font-size: 16px;
   margin-bottom: 8px;
   font-weight: 800;
 }
 
 .product-item-image {
   width: 100%;
-  height: 180px; /* Фиксированная высота для картинки */
+  height: 180px;
   object-fit: contain;
-  flex-shrink: 0; /* Не сжиматься */
+  flex-shrink: 0;
 }
 
 .product-item-description {
-  height: 40px; /* Фиксированная высота для описания */
+  height: 40px;
   overflow: hidden;
-  text-overflow: ellipsis; /* Добавляет ... в конце */
-  white-space: nowrap; /* Запрещает перенос на новую строку */
-  -webkit-line-clamp: 2; /* Обрезаем описание до 2 строк */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-line-clamp: 2;
 }
 
 .product-item-price {
@@ -78,13 +78,13 @@
 }
 
 .product-item-button {
-  margin-top: auto; /* Прижимаем кнопку к нижнему краю карточки */
+  margin-top: auto;
   padding: 12px 20px;
-  width: 100%; /* Растягиваем на всю ширину */
-  background-color: #4CAF50; /* Яркий зеленый */
+  width: 100%;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 30px; /* Сильно скругленная, как таблетка */
+  border-radius: 30px;/
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -92,22 +92,22 @@
 }
 
 .product-item-button:hover {
-  background-color: #45a049; /* Темнеет при наведении */
+  background-color: #45a049;
 }
 
 /* Основной контейнер корзины */
 .cart {
-  position: sticky; /* Прилипает при скролле */
+  position: sticky;
   top: 20px;
-  width: 380px; /* Фиксированная ширина */
-  max-height: 600px; /* Максимальная высота */
+  width: 380px;
+  max-height: 600px;
   background: white;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
-  margin-left: auto; /* Прижимаем к правому краю */
+  margin-left: auto;
 }
 
 /* Заголовок корзины */
@@ -123,13 +123,12 @@
 /* Список товаров (прокручиваемый) */
 .cart-items {
   flex: 1;
-  overflow-y: auto; /* Вертикальная прокрутка */
+  overflow-y: auto;
   padding-right: 4px;
   margin-bottom: 16px;
   max-height: 400px;
 }
 
-/* Кастомизация скроллбара (для красоты) */
 .cart-items::-webkit-scrollbar {
   width: 4px;
 }
@@ -150,7 +149,7 @@
 }
 
 .cart-item-title {
-  flex: 1; /* Занимает всё свободное место */
+  flex: 1;
   font-size: 14px;
   font-weight: 500;
   color: #333;

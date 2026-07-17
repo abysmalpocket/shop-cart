@@ -1,12 +1,20 @@
-# React + Vite
+# 🛒 Интернет-магазин на React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Одностраничное приложение интернет-магазина с корзиной, поиском и фильтрацией товаров.
 
-Currently, two official plugins are available:
+## 🚀 Демо
+Посмотреть проект вживую: [https://abysmalpocket.github.io/shop-cart](https://abysmalpocket.github.io/shop-cart)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Стек технологий
+- React 19
+- Vite
+- CSS
+- React Hooks (useState, useEffect)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚡️ Функционал
+- Загрузка товаров с API (`fakestoreapi.com`)
+- Поиск товаров по названию
+- Добавление товаров в корзину
+- Увеличение/уменьшение количества товара в корзине
+- Удаление товаров из корзины
+- Подсчет общей стоимости заказа

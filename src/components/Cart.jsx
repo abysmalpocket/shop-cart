@@ -2,15 +2,15 @@ const Cart = ({cart, increaseQuantity, decreaseQuantity, removeItem}) => {
   if (cart.length === 0) {
     return (
       <div className="cart">
-        <h2>🛒 Корзина</h2>
-        <p className="cart-empty">Корзина пуста</p>
+        <h2>🛒 Cart</h2>
+        <p className="cart-empty">The cart is empty</p>
       </div>
     );
   }
 
   return (
     <div className="cart">
-      <h2>🛒 Корзина</h2>
+      <h2>🛒 Cart</h2>
       <div className="cart-items">
         {cart.map((item) => (
           <div
