@@ -3,7 +3,7 @@
 Одностраничное приложение интернет-магазина с корзиной, поиском и фильтрацией товаров.
 
 ## 🚀 Демо
-Посмотреть проект вживую: [https://abysmalpocket.github.io/shop-cart](https://abysmalpocket.github.io/shop-cart)
+Посмотреть проект вживую: [https://abysmalpocket.github.io/shop-cart](https://abysmalpocket.github.io/shop-cart//)
 
 ## 📦 Стек технологий
 - React 19
