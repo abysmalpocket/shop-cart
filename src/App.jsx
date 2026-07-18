@@ -1,12 +1,10 @@
-import ProductList from "./components/ProductList.jsx";
 import {useState, useEffect} from "react";
-import Cart from "./components/Cart.jsx";
 import '../src/styles/normalize.css'
 import '../src/styles/styles.css'
-import FindProductsInput from "./components/FindProductsInput.jsx";
 import {Link} from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import CartPage from "./pages/CartPage.jsx";
+import {Routes, Route, Navigate} from 'react-router-dom';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -80,36 +78,42 @@ const App = () => {
   }
 
   return (<div className="main__container">
-    <h1 className="main__container-title">🛒 Online store</h1>
+      <h1 className="main__container-title">🛒 Online store</h1>
 
-    <nav className="main__container-navmenu">
-      <Link to="/">Main page</Link>
-      <Link to="/cart">Cart</Link>
-    </nav>
+      <nav className="main__container-navmenu">
+        <Link to="/">Main page</Link>
+        <Link to="/cart">Cart</Link>
+      </nav>
 
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/" element={<CartPage />}/>
-    </Routes>
-
-    <FindProductsInput
-      searchTerm={searchTerm}
-      setSearchTerm={setSearchTerm}
-    />
-    <div className="content">
-      <ProductList
-        products={products}
-        onAddToCart={onAddToCart}
-        searchTerm={searchTerm}
-      />
-      <Cart
-        cart={cart}
-        increaseQuantity={increaseQuantity}
-        decreaseQuantity={decreaseQuantity}
-        removeItem={removeItem}
-      />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home
+            products={products}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            onAddToCart={onAddToCart}
+          />}
+        />
+        <Route
+          path="/cart"
+          element={<CartPage
+            cart={cart}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
+            removeItem={removeItem}
+          />}
+        />
+        <Route
+          path="*"
+          element={<Navigate
+            to="/"
+            replace
+          />}
+        />
+      </Routes>
     </div>
-  </div>);
+  );
 };
 
 export default App;

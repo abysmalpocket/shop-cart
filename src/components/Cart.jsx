@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const Cart = ({cart, increaseQuantity, decreaseQuantity, removeItem}) => {
   if (cart.length === 0) {
     return (
-      <div className="cart">
-        <h2>🛒 Cart</h2>
-        <p className="cart-empty">The cart is empty</p>
+      <div className="cart-empty">
+        <h2>Cart is empty ☹️</h2>
+        <p>But you can always choose products on the home page</p>
+        <Link to="/" className="continue-shopping">Go to products</Link>
       </div>
     );
   }

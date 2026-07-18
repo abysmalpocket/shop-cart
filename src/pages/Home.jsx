@@ -1,6 +1,20 @@
-const Home = () => {
+import FindProductsInput from "../components/FindProductsInput.jsx";
+import ProductList from "../components/ProductList.jsx";
+
+const Home = (props) => {
+  const {products, searchTerm, setSearchTerm, onAddToCart} = props
   return (
-    <h2>Main page</h2>
+    <div>
+      <FindProductsInput
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+      />
+      <ProductList
+        products={products}
+        onAddToCart={onAddToCart}
+        searchTerm={searchTerm}
+      />
+    </div>
   );
 };
 
